@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root container setup */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white; /* ✅ Should be white */
+  font-family: 'Inter', sans-serif;
+}
+
+
+@layer components {
+  /* Navbar & Footer */
+  header {
+    @apply bg-green-600 text-white px-6 py-4 shadow-md;
+  }
+
+  footer {
+    @apply bg-gray-100 py-6 text-center text-sm text-gray-500;
+  }
+
+  /* Hero Section */
+  .hero-heading {
+    @apply text-5xl font-extrabold text-gray-800 mb-6 leading-tight;
+  }
+
+  .hero-subtext {
+    @apply text-gray-600 text-lg mb-8;
+  }
+
+  .hero-button {
+    @apply bg-green-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-green-700 transition;
+  }
+
+  /* Navigation Links */
+  nav a {
+    @apply hover:text-yellow-300 transition text-white;
+  }
+
+  /* Utility Headings */
+  .section-title {
+    @apply text-2xl font-semibold text-gray-800 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-gray-600 mb-4;
+  }
+
+  /* Reusable Button (if needed elsewhere) */
+  .button-primary {
+    @apply bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition;
+  }
+}
